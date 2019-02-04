@@ -4,7 +4,7 @@
 #
 Name     : R-highlight
 Version  : 0.4.7.2
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/highlight_0.4.7.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/highlight_0.4.7.2.tar.gz
 Summary  : Syntax Highlighter
@@ -14,9 +14,9 @@ Requires: R-highlight-lib = %{version}-%{release}
 BuildRequires : buildreq-R
 
 %description
-on the results of the R parser. Rendering in HTML and latex 
-	markup. Custom Sweave driver performing syntax highlighting 
-	of R code chunks.
+highlight
+=========
+[![Build Status](https://travis-ci.org/romainfrancois/highlight.png)](https://travis-ci.org/romainfrancois/highlight)
 
 %package lib
 Summary: lib components for the R-highlight package.
@@ -34,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1540824794
+export SOURCE_DATE_EPOCH=1549270049
 
 %install
-export SOURCE_DATE_EPOCH=1540824794
+export SOURCE_DATE_EPOCH=1549270049
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
