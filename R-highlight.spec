@@ -4,7 +4,7 @@
 #
 Name     : R-highlight
 Version  : 0.4.7.2
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/highlight_0.4.7.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/highlight_0.4.7.2.tar.gz
 Summary  : Syntax Highlighter
@@ -34,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549270049
+export SOURCE_DATE_EPOCH=1552771251
 
 %install
-export SOURCE_DATE_EPOCH=1549270049
+export SOURCE_DATE_EPOCH=1552771251
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,8 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library highlight|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  highlight || :
 
 
 %files
@@ -299,7 +298,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/highlight/highlight/themes/zellner.style
 /usr/lib64/R/library/highlight/html/00Index.html
 /usr/lib64/R/library/highlight/html/R.css
-/usr/lib64/R/library/highlight/libs/symbols.rds
 /usr/lib64/R/library/highlight/stylesheet/default.css
 
 %files lib
