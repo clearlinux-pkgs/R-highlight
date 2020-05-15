@@ -4,7 +4,7 @@
 #
 Name     : R-highlight
 Version  : 0.5.0
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/highlight_0.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/highlight_0.5.0.tar.gz
 Summary  : Syntax Highlighter
@@ -14,11 +14,8 @@ Requires: R-highlight-lib = %{version}-%{release}
 BuildRequires : buildreq-R
 
 %description
-highlight
-=========
-<!-- badges: start -->
-<!-- badges: end -->
-Syntax highlighter for R based on [highlight](http://www.andre-simon.de/doku/highlight/en/highlight.html)
+of the R parser. Rendering in HTML and latex markup. Custom Sweave
+    driver performing syntax highlighting of R code chunks.
 
 %package lib
 Summary: lib components for the R-highlight package.
@@ -30,21 +27,22 @@ lib components for the R-highlight package.
 
 %prep
 %setup -q -c -n highlight
+cd %{_builddir}/highlight
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576529579
+export SOURCE_DATE_EPOCH=1589534795
 
 %install
-export SOURCE_DATE_EPOCH=1576529579
+export SOURCE_DATE_EPOCH=1589534795
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
