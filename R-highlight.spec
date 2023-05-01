@@ -4,7 +4,7 @@
 #
 Name     : R-highlight
 Version  : 0.5.1
-Release  : 39
+Release  : 40
 URL      : https://cran.r-project.org/src/contrib/highlight_0.5.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/highlight_0.5.1.tar.gz
 Summary  : Syntax Highlighter
